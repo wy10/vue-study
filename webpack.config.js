@@ -7,9 +7,9 @@ module.exports = {
         // 入口文件打包后的 文件名称
         filename: 'bundle.js',
         // 所有输出文件的目标路径
-        path: path.resolve(__dirname,'dist'),
+        path: path.resolve(__dirname,'./dist'),
         // 输出解析文件的目录，url相对于html页面
-        publicPath: '/assets/',
+        publicPath: '/dist/',
     },
     // 模块配置
     module: {   

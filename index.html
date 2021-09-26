@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 本地需要相对路径 -->
+    <div id="app"></div>
+    <!-- 本地需要相对路径 ./dist/bundle.js 表示在磁盘的位置 -->
+    <!-- webpack-dev-server帮我们重新打包生成的bundle.js文件并没有放到实际的物理磁盘上（因为是重新打包，所以是覆盖原文件budle.js）二十直接存放在电脑内存中
+        需要包路径改成'/dist/bundle.js'
+    -->
     <script src="/dist/bundle.js"></script>
 </body>
 </html>
