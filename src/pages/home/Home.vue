@@ -1,9 +1,8 @@
 <template>
-    <div>
+    <div style="height:10px;width:30px">
         {{$route.query.id}}
         这是home页面
        <input v-model="msg"/>
-        <!-- <router-view></router-view> -->
     </div>
 </template>
 
