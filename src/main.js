@@ -1,12 +1,13 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 import App from './App.vue'
-import router from './router'
+import { initOptionMergeStrategies,bind } from './pages/optionMergeStrategies/index'
 
-Vue.use(VueRouter)
-
-new Vue({
+// 自定义混合策略钩子
+initOptionMergeStrategies()
+const vm = new Vue({
     el:'#app',
-    router,
     render: (h) => h(App)
 })
+
+// 触发某事件的时候触发钩子
+bind(vm)

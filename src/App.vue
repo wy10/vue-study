@@ -1,23 +1,17 @@
 <template>
     <div>
-        <div>
-            <img src="./img/1.jpg" style="width:50px;height:50px;border-radius:50%" />
-            <p>{{ msg }}</p>
-            <router-link to="/home">Home</router-link>
-            <router-link to="/other">other</router-link>
-            <router-link to="/login">Login</router-link>
-        </div>
-        <div>
-            <transition>
-                <router-view></router-view>
-            </transition>
-        </div>
+      <option-merge-strategies/>
     </div>
 </template>
 
 <script>
+import OptionMergeStrategies from './pages/optionMergeStrategies/index.vue'
     export default {
         name:'App',
+        components:{
+            OptionMergeStrategies
+
+        },
         data() {
             return {
                 msg: 'hello world1111'
