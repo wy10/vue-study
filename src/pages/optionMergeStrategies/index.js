@@ -17,7 +17,9 @@ export function bind(vm){
 function excutePageVisible(vm){
     // 定义pageVisible 钩子函数在$option中
     const lifeCycles = vm.$options.pageVisible
-    // 这里使用数组的原因是 他等同于 beforeCreate 钩子函数，钩子函数将合并为一个数组
+    // 这里使用数组的原因是 他等同于 beforeCreate 钩子函数，
+    // 钩子函数在$option中以数组的形式存在，mixin执行之后，钩子函数也会合并到这个数组中
+    console.log(vm.$options.created)
     if(lifeCycles && lifeCycles.length){
         lifeCycles.forEach(fn => fn.call(vm))
     }
